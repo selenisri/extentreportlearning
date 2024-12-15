@@ -95,7 +95,7 @@ public class DeleteForm extends BaseBrowser{
 			        System.out.println("Fail-o");
 			    }
 			} catch (Exception e) {
-			    System.out.println("Something went wrong !!");
+			    System.out.println("Something went wrong !!!");
 			}
 		  
 		
