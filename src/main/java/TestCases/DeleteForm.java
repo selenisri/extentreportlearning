@@ -14,7 +14,7 @@ import PageObjects.UpdateFieldsObject;
 
 public class DeleteForm extends BaseBrowser{
 
-	//From Eclipse
+	//From Master Branch
 
 	DeletePageObject DelObject = new DeletePageObject();
 	UpdateFieldsObject upObject = new UpdateFieldsObject();
