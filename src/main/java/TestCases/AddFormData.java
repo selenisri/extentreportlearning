@@ -47,6 +47,7 @@ public class AddFormData extends BaseBrowser{
 		
 	}
 	
+	
 	@Test
 	(priority=2)
 	public void getSubmissionCount() throws InterruptedException, IOException
@@ -140,32 +141,55 @@ public class AddFormData extends BaseBrowser{
 	
 	}
 	
-//	@Test
-//	(priority=6)
-//	public void deleteForm() throws InterruptedException, IOException, HeadlessException, UnsupportedFlavorException
-//	{
-//		//Delete the form
-//		
-//		PageFactory.initElements(driver,UpdateFields.class);
-//		upObject.NavigatetoURL(driver, "https://beta.zippyform.io/forms/");
-//		String Number1 =upObject.getValueText(driver, "count");
-//		int num1 = Integer.parseInt(Number1);
-//        int num2 = Integer.parseInt(Number);
-//        // Add the two integers
-//        int sum = num2 + 1;
-//        System.out.println(sum);
-//        System.out.print(num1);
-//			try {
-//		    if (sum==num1) {
-//		    	System.out.println("pass-o");
-//		    } else {
-//		        System.out.println("Fail-o");
-//		    }
-//		} catch (Exception e) {
-//		    System.out.println(e);
-//		}
-//	
-//	}
+	
+	
+	@Test
+	(priority=5)
+	public void checkSubmissionList() throws InterruptedException, IOException, HeadlessException, UnsupportedFlavorException
+	{
+		//check the Submission count is working fine
+		
+		PageFactory.initElements(driver,UpdateFields.class);
+		upObject.NavigatetoURL(driver, "https://beta.zippyform.io/forms/");
+		upObject.clickhere(driver, "action_menu");
+		upObject.clickhere(driver, "submissionlist");
+		int num=upObject.get(driver);
+		System.out.println(num);
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	@Test
+	(priority=6)
+	public void deleteForm() throws InterruptedException, IOException, HeadlessException, UnsupportedFlavorException
+	{
+		//check the Number count !
+		
+		PageFactory.initElements(driver,UpdateFields.class);
+		upObject.NavigatetoURL(driver, "https://beta.zippyform.io/forms/");
+		String Number1 =upObject.getValueText(driver, "count");
+		int num1 = Integer.parseInt(Number1);
+        int num2 = Integer.parseInt(Number);
+        // Add the two integers
+        int sum = num2 + 1;
+        System.out.println(sum);
+        System.out.print(num1);
+			try {
+		    if (sum==num1) {
+		    	System.out.println("pass-o");
+		    } else {
+		        System.out.println("Fail-o");
+		    }
+		} catch (Exception e) {
+		    System.out.println(e);
+		}
+	
+	}
 	
 	
 	

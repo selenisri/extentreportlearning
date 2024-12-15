@@ -57,8 +57,8 @@ public class UpdateFields extends BaseBrowser  {
 		  upObject.DragnDrop(driver, "name");
 		  upObject.DragnDrop(driver, "email");
 		  upObject.DragnDrop(driver, "number");
-		// upObject.EnterValue(driver, "name", "firstname");
-		// upObject.clickhere(driver, "updateButton");
+		  upObject.EnterValue(driver, "firstname", "Firstname");
+		 // upObject.clickhere(driver, "updateButton");
 		  try 
 		  { 
 			   String texta =upObject.getValueText(driver, "popup");
@@ -81,8 +81,8 @@ public class UpdateFields extends BaseBrowser  {
 		//check the user can able to add the text field name
 		
 		  PageFactory.initElements(driver,UpdateFields.class);
-		  //upObject.enterLable(driver, "textfield");
-		  upObject.EnterValue(driver, "name", "Name");
+		 //upObject.enterLable(driver, "textfield");
+		 //upObject.EnterValue(driver, "phonenumber", "Name");
 		  upObject.clickhere(driver, "updateButton");
 		  try 
 		  { 
@@ -137,6 +137,7 @@ public class UpdateFields extends BaseBrowser  {
 		  upObject.enterLable(driver, "number");
 		  upObject.EnterValue(driver, "num", "Your Number");
 		  upObject.clickhere(driver, "updateButton");
+		  
 		  try 
 		  { 
 			   String texta =upObject.getValueText(driver, "popup");
@@ -150,11 +151,84 @@ public class UpdateFields extends BaseBrowser  {
 			    System.out.println("Something went wrong !!");
 			}
 		}
+	
+	@Test
+	(priority=6)
+	public void DragandDropParaHeading() throws InterruptedException, IOException
+	{
+		//check the user can able to add the P and Heading
+		
+		  PageFactory.initElements(driver,UpdateFields.class);
+		  upObject.DragnDrop(driver, "heading");
+		  upObject.DragnDrop(driver, "para");
+		  
+		  try 
+		  { 
+			   String texta =upObject.getValueText(driver, "popup");
+			   System.out.println(texta+"add txt field");
+			    if (texta.equals(properties.getProperty("successaddfield"))) {
+			    	System.out.println("pass-o");
+			    } else {
+			        System.out.println("Fail-o");
+			    }
+			} catch (Exception e) {
+			    System.out.println("Something went wrong !!");
+			}
+		}
+	
+	@Test
+	(priority=7)
+	public void HeadingName() throws InterruptedException, IOException
+	{
+		//check the user can able to add the P and Heading
+		
+		  PageFactory.initElements(driver,UpdateFields.class);
+		  upObject.enterLable(driver, "header");
+		  upObject.EnterValue(driver, "head", "u'll get notify");
+		  upObject.clickhere(driver, "updateButton");
+		  try 
+		  { 
+			   String texta =upObject.getValueText(driver, "popup");
+			   System.out.println(texta+"add txt field");
+			    if (texta.equals(properties.getProperty("successaddfield"))) {
+			    	System.out.println("pass-o");
+			    } else {
+			        System.out.println("Fail-o");
+			    }
+			} catch (Exception e) {
+			    System.out.println("Something went wrong !!");
+			}
+		}
+	
+	@Test
+	(priority=8)
+	public void ParaName() throws InterruptedException, IOException
+	{
+		//check the user can able to add the P and Heading
+		
+		  upObject.enterLable(driver, "para");
+		  upObject.EnterValue(driver, "para", "Important Notes");
+		  upObject.clickhere(driver, "updateButton");
+		  
+		  try 
+		  { 
+			   String texta =upObject.getValueText(driver, "popup");
+			   System.out.println(texta+"add txt field");
+			    if (texta.equals(properties.getProperty("successaddfield"))) {
+			    	System.out.println("pass-o");
+			    } else {
+			        System.out.println("Fail-o");
+			    }
+			} catch (Exception e) {
+			    System.out.println("Something went wrong !!");
+			}
+		}
+	
 
 	
 	
 	@Test
-	(priority=6)
+	(priority=9)
 	public void publishButton() throws InterruptedException, IOException
 	{
 		//check the user can able to active the fields.

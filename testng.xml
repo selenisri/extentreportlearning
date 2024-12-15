@@ -7,8 +7,8 @@
        <class name="TestCases.LoginCases"/>
       <class name="TestCases.CreateFormCases"/>
       <class name="TestCases.UpdateFields"/>
-      <class name="TestCases.AddFormData"/>
-      <class name="TestCases.DeleteForm"/>
+       <class name="TestCases.AddFormData"/>
+        <class name="TestCases.DeleteForm"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

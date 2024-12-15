@@ -16,6 +16,7 @@ public class DeleteForm extends BaseBrowser{
 	
 	DeletePageObject DelObject = new DeletePageObject();
 	UpdateFieldsObject upObject = new UpdateFieldsObject();
+
 	Properties properties = new Properties();
 
 	
@@ -48,11 +49,39 @@ public class DeleteForm extends BaseBrowser{
 		
 	}
 	
+	
 	@Test
 	(priority=2)
+	public void RemoveFields() throws InterruptedException, IOException
+	{
+		//remove all the three fields
+		
+
+		PageFactory.initElements(driver,DeletePageObject.class);
+		DelObject.getListNameandClick(driver);
+        DelObject.clickNextandFinish(driver, "Next");
+		int getcount =DelObject.ClickDeleteButton(driver, "name");
+		System.out.println(getcount);
+		try {
+		    if (getcount==3) {
+		    	System.out.println("pass-o");
+		    } else {
+		        System.out.println("Fail-o");
+		    }
+		} catch (Exception e) {
+		    System.out.println("Something went wrong !!");
+		}
+	  
+		DelObject.MovebackandWait(driver);
+	
+	}
+	
+	
+	@Test
+	(priority=3)
 	public void DeleteForm() throws InterruptedException, IOException
 	{
-		//check the user can able to Copy the URL and Paste it in the New Tab
+		//DeleteForm
 		
 		  PageFactory.initElements(driver,DeletePageObject.class);
 		  DelObject.ClickActionButton(driver);

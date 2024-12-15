@@ -3,6 +3,7 @@ package PageObjects;
 import java.io.FileInputStream;
 import org.openqa.selenium.JavascriptExecutor;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.awt.HeadlessException;
 import java.awt.Toolkit; 
@@ -32,11 +33,13 @@ public class FormObject {
 	public static By custom_lable= By.xpath("//h4[text()='Custom Form Link']");
 	public static By Success_message = By.id("okButton");
 	public static By submission_count = By.xpath("//h6[text()='kilo']//following::p[1]//strong");
+	public static By table_data = By.xpath("//div[@id='submissionlist_section']//following::tbody//tr[1]//td");
+	
 	
 	//action drop down
 	
 	public static By action = By.xpath("//h6[text()='kilo']//following::button[1]");
-	
+	public static By menu_submission_list = By.xpath("//h6[text()='kilo']//following::li[4]");
 	//shadow element
 	
 	public static By name= By.cssSelector("input[data-type='text_box'][data-label='Name']");
@@ -51,6 +54,27 @@ public class FormObject {
 		WebElement field = wait.until(ExpectedConditions.elementToBeClickable(element));
 		String text=field.getText();
 		return text;
+	}
+	
+	public int get(WebDriver driver ) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+ 		WebElement field = wait.until(ExpectedConditions.visibilityOfElementLocated(table_data));
+ 		int num=0;
+ 		Thread.sleep(5000);
+ 		List<WebElement> elements = driver.findElements(table_data);
+ 		for(int i=0;i<elements.size();i++)
+ 		{
+ 			String text = elements.get(i).getText();
+ 			if (text.equals("sriram") || text.equals("sriram@zaigoinfotech.com") || text.equals("9")) {
+ 	            num++;
+ 	            
+ 	        }
+ 	    
+ 		}
+ 		return num;
+ 		
+ 		
 	}
 	
 	public void NavigatetoURL(WebDriver driver , String value)
@@ -125,6 +149,12 @@ public class FormObject {
     	}else if(value.equals("copy_btn"))
     	{
     		this.clickme(driver,copy_btn);
+    	}else if(value.equals("action_menu"))
+    	{
+    		this.clickme(driver, action);
+    	}else if(value.equals("submissionlist"))
+    	{
+    		this.clickme(driver, menu_submission_list);
     	}
 	}
 	public void clickNextandFinish(WebDriver driver ,String value)
@@ -184,7 +214,7 @@ public class FormObject {
 
 		    // Use JavaScript to access the shadow DOM and directly target the input element
 		    WebElement elementInShadowDom = (WebElement) js.executeScript(
-		        "return arguments[0].shadowRoot.querySelector('input[data-type=\"text_box\"][data-label=\"Name\"]')", 
+		        "return arguments[0].shadowRoot.querySelector('input[data-type=\"text_box\"][data-label=\"Firstname\"]')", 
 		        shadowHost);
 
 		    // Check if the element is found, throw exception if it's null

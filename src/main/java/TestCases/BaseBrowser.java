@@ -20,7 +20,7 @@ public class BaseBrowser  {
 	@BeforeClass
 	public  void browserConfigChrome() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srira\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srira\\Downloads\\chromedriver-win64wed\\chromedriver-win64\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://beta.zippyform.io/login/");
 		driver.manage().window().maximize();
