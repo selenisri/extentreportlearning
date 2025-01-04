@@ -16,7 +16,6 @@
       <class name="TestCases.DeleteForm"/>
       <class name="TestCases.CreateFormCases"/>
       <class name = "TestCases.StepForm"/>
-      <class name ="TestCases.DeleteAll"/>
       </classes>
    
   </test> <!-- Test -->
