@@ -157,7 +157,7 @@ public class CreateFormCases extends BaseBrowser {
 		try {
 		    String texta = Createform.getListName(driver);
 		    System.out.println(texta);
-		    if (texta.equals("Formxyz")) {
+		    if (texta.equals("kilo")) {
 		    	System.out.println("Pass");
 		    } else {
 		        System.out.println("Fail-o");

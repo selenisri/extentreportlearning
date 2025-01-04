@@ -64,6 +64,7 @@ public class StepFormObject {
 	
 	
 	public static By toastMessage = By.id("toast_type");
+	public static By toastCheck = By.id("toastmsg");
 	public static By Gen_Settings = By.xpath("//h6[text()='General Settings']");
 	
 	public static By fieldUpdated = By.xpath("//span[text()='Field Settings Updated Successfully']");
@@ -96,7 +97,9 @@ public class StepFormObject {
 	public static By get_link= By.xpath("//p[@id='customform_link']");
 	
 	
-	
+	public static By edit_dd = By.xpath("//section[starts-with(@id,'dragareasection_')]//select//following::span[2]");
+	public static By edit_rad =By.xpath("//section[starts-with(@id,'dragareasection_')]//input[@type='radio']//following::span[2]");
+	public static By edit_che= By.xpath("//section[starts-with(@id,'dragareasection_')]//input[@type='checkbox']//following::span[2]");
 	
 	//Add Step
 	
@@ -299,6 +302,10 @@ public void draganddrop2(WebDriver driver, By element ) {
 		return text;
 	}
 	
+	
+	
+	
+	
 	public String getValueText(WebDriver driver , String value)
 	{
 		String text="";
@@ -312,6 +319,10 @@ public void draganddrop2(WebDriver driver, By element ) {
          {text=this.getText(driver, formname); }
          else if(value.equals("popup"))
          {text=this.getText(driver, toastMessage); }
+         else if(value.equals("toastCheck"))
+         {
+        	 text=this.getText(driver, toastCheck);
+         }
 		return text;
 	}
 	
@@ -387,15 +398,15 @@ public void draganddrop2(WebDriver driver, By element ) {
             }
           else if(value.equals("dropdown")) {
             	this.HoverElement(driver, "dropdown");
-            	this.editbutton(driver, 1);
+            	this.clickme(driver, edit_dd);
               }
           else if(value.equals("radio")) {
           	this.HoverElement(driver, "radio");
-          	this.editbutton(driver, 4);
+          	this.clickme(driver, edit_rad);
             }
           else if(value.equals("checkbox")) {
             	this.HoverElement(driver, "check");
-            	this.editbutton(driver, 7);
+            	this.clickme(driver, edit_che);
               }
 		
 	}

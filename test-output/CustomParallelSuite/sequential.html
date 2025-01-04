@@ -1,0 +1,339 @@
+<html>
+<head>
+<title>TestNG:  sequential</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>sequential</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>52/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jan 04 21:58:28 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>620 seconds (620424 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.StepForm.TabNameValidation()'><b>TabNameValidation</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>50</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.AddFormData.ClickCustomFormLink()'><b>ClickCustomFormLink</b><br>Test class: TestCases.AddFormData</td>
+<td></td>
+<td>46</td>
+<td>TestCases.AddFormData@35cabb2a</td></tr>
+<tr>
+<td title='TestCases.DeleteAll.DeleteForm()'><b>DeleteForm</b><br>Test class: TestCases.DeleteAll</td>
+<td></td>
+<td>2</td>
+<td>TestCases.DeleteAll@49ec71f8</td></tr>
+<tr>
+<td title='TestCases.AddFormData.getSubmissionCount()'><b>getSubmissionCount</b><br>Test class: TestCases.AddFormData</td>
+<td></td>
+<td>0</td>
+<td>TestCases.AddFormData@35cabb2a</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddFields()'><b>AddFields</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>2</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.AddText()'><b>AddText</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>6</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddTimeField()'><b>AddTimeField</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>6</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.SearchFields.SearchFindsFields()'><b>SearchFindsFields</b><br>Test class: TestCases.SearchFields<br>Parameters: Time, time</td>
+<td></td>
+<td>4</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+<tr>
+<td title='TestCases.DeleteAll.Login()'><b>Login</b><br>Test class: TestCases.DeleteAll</td>
+<td></td>
+<td>2</td>
+<td>TestCases.DeleteAll@49ec71f8</td></tr>
+<tr>
+<td title='TestCases.SearchFields.SearchFieldExist()'><b>SearchFieldExist</b><br>Test class: TestCases.SearchFields</td>
+<td></td>
+<td>47</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.CreatFormLandingPage()'><b>CreatFormLandingPage</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>6</td>
+<td>TestCases.CreateFormCases@36bc55de</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.LandinDashboardPage()'><b>LandinDashboardPage</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>2</td>
+<td>TestCases.CreateFormCases@36bc55de</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.InvalidNameform()'><b>InvalidNameform</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>44</td>
+<td>TestCases.CreateFormCases@36bc55de</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddNumberField()'><b>AddNumberField</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>28</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.SearchFields.SearchFindsFields()'><b>SearchFindsFields</b><br>Test class: TestCases.SearchFields<br>Parameters: Email, email</td>
+<td></td>
+<td>5</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.ParaName()'><b>ParaName</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>2</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddRadioLable()'><b>AddRadioLable</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>8</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.AddFormData.checkSubmissionCount()'><b>checkSubmissionCount</b><br>Test class: TestCases.AddFormData</td>
+<td></td>
+<td>1</td>
+<td>TestCases.AddFormData@35cabb2a</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddDropDownLable()'><b>AddDropDownLable</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>11</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddFieldsTwo()'><b>AddFieldsTwo</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>1</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.AddFormData.Newtab()'><b>Newtab</b><br>Test class: TestCases.AddFormData</td>
+<td></td>
+<td>8</td>
+<td>TestCases.AddFormData@35cabb2a</td></tr>
+<tr>
+<td title='TestCases.DeleteForm.DeleteForm()'><b>DeleteForm</b><br>Test class: TestCases.DeleteForm</td>
+<td></td>
+<td>2</td>
+<td>TestCases.DeleteForm@1189dd52</td></tr>
+<tr>
+<td title='TestCases.StepForm.Tab2NameValidation()'><b>Tab2NameValidation</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>5</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.SearchFields.SearchFindsFields()'><b>SearchFindsFields</b><br>Test class: TestCases.SearchFields<br>Parameters: Checkbox, multiselect_checkbox</td>
+<td></td>
+<td>4</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.ValidNamingform()'><b>ValidNamingform</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>1</td>
+<td>TestCases.CreateFormCases@36bc55de</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.HeadingName()'><b>HeadingName</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>5</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddWebsiteField()'><b>AddWebsiteField</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>6</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.DeleteForm.RemoveFields()'><b>RemoveFields</b><br>Test class: TestCases.DeleteForm</td>
+<td></td>
+<td>116</td>
+<td>TestCases.DeleteForm@1189dd52</td></tr>
+<tr>
+<td title='TestCases.AddFormData.checkSubmissionList()'><b>checkSubmissionList</b><br>Test class: TestCases.AddFormData</td>
+<td></td>
+<td>7</td>
+<td>TestCases.AddFormData@35cabb2a</td></tr>
+<tr>
+<td title='TestCases.SearchFields.LandinDashboardPage()'><b>LandinDashboardPage</b><br>Test class: TestCases.SearchFields</td>
+<td></td>
+<td>2</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+<tr>
+<td title='TestCases.AddFormData.Login()'><b>Login</b><br>Test class: TestCases.AddFormData</td>
+<td></td>
+<td>2</td>
+<td>TestCases.AddFormData@35cabb2a</td></tr>
+<tr>
+<td title='TestCases.AddFormData.deleteForm()'><b>deleteForm</b><br>Test class: TestCases.AddFormData</td>
+<td></td>
+<td>0</td>
+<td>TestCases.AddFormData@35cabb2a</td></tr>
+<tr>
+<td title='TestCases.StepForm.AddCheckboxLable()'><b>AddCheckboxLable</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>8</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.SearchFields.SearchFindsFields()'><b>SearchFindsFields</b><br>Test class: TestCases.SearchFields<br>Parameters: Radio, radio</td>
+<td></td>
+<td>4</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+<tr>
+<td title='TestCases.SearchFields.SearchFindsFields()'><b>SearchFindsFields</b><br>Test class: TestCases.SearchFields<br>Parameters: Website, website_url</td>
+<td></td>
+<td>4</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.DragandDropParaHeading()'><b>DragandDropParaHeading</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>0</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.checkNameinList()'><b>checkNameinList</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>5</td>
+<td>TestCases.CreateFormCases@36bc55de</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.AddNumberField()'><b>AddNumberField</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>6</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.LandinDashboardPage()'><b>LandinDashboardPage</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>2</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.StepForm.LandinDashboardPage()'><b>LandinDashboardPage</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>2</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.StepForm.shortTextField()'><b>shortTextField</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>6</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.AddTextField()'><b>AddTextField</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>49</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.StepForm.MakeActive()'><b>MakeActive</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>6</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.publishButton()'><b>publishButton</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>4</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.StepForm.Tab2NameAddition()'><b>Tab2NameAddition</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>5</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.DeleteForm.Login()'><b>Login</b><br>Test class: TestCases.DeleteForm</td>
+<td></td>
+<td>2</td>
+<td>TestCases.DeleteForm@1189dd52</td></tr>
+<tr>
+<td title='TestCases.StepForm.TextAreaField()'><b>TextAreaField</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>6</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.StepForm.UpdateTabName()'><b>UpdateTabName</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>5</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.StepForm.dateTextField()'><b>dateTextField</b><br>Test class: TestCases.StepForm</td>
+<td></td>
+<td>6</td>
+<td>TestCases.StepForm@16d04d3d</td></tr>
+<tr>
+<td title='TestCases.UpdateFields.AddEmailField()'><b>AddEmailField</b><br>Test class: TestCases.UpdateFields</td>
+<td></td>
+<td>6</td>
+<td>TestCases.UpdateFields@478190fc</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.CreatFormPopup()'><b>CreatFormPopup</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.CreateFormCases@36bc55de</td></tr>
+<tr>
+<td title='TestCases.SearchFields.SearchFindsFields()'><b>SearchFindsFields</b><br>Test class: TestCases.SearchFields<br>Parameters: Date, date</td>
+<td></td>
+<td>4</td>
+<td>TestCases.SearchFields@72d1ad2e</td></tr>
+</table><p>
+</body>
+</html>

@@ -45,8 +45,7 @@ public class UpdateFields extends BaseBrowser  {
 
 	
 	
-	@Test
-	(priority=2)
+	@Test(dependsOnMethods = {"LandinDashboardPage"}, priority=2)
 	public void AddTextField() throws InterruptedException, IOException
 	{
 		//check the user can able to add the text field

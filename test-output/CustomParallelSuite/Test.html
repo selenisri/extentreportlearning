@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jan 04 21:57:14 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>74 seconds (74087 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkPasswordMandatory()'><b>checkPasswordMandatory</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.LandinDashboardPage()'><b>LandinDashboardPage</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>3</td>
+<td>TestCases.CreateFormCases@3c407114</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.LandinRegistrationPage()'><b>LandinRegistrationPage</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkValidEmail()'><b>checkValidEmail</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkGotoLoginLink()'><b>checkGotoLoginLink</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.CreatFormPopup()'><b>CreatFormPopup</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.CreateFormCases@3c407114</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkEmailUniqueValidation()'><b>checkEmailUniqueValidation</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>1</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.LoginCases.EmptyPasswordValidation()'><b>EmptyPasswordValidation</b><br>Test class: TestCases.LoginCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.LoginCases@50a638b5</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkSuccessForm()'><b>checkSuccessForm</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>2</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.InvalidNameform()'><b>InvalidNameform</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>44</td>
+<td>TestCases.CreateFormCases@3c407114</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkCharPasswordValidation()'><b>checkCharPasswordValidation</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkMaxCharPasswordValidation()'><b>checkMaxCharPasswordValidation</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.ValidNamingform()'><b>ValidNamingform</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>1</td>
+<td>TestCases.CreateFormCases@3c407114</td></tr>
+<tr>
+<td title='TestCases.LoginCases.EmptyEmailEmptyPassword()'><b>EmptyEmailEmptyPassword</b><br>Test class: TestCases.LoginCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.LoginCases@50a638b5</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.checkNameinList()'><b>checkNameinList</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>5</td>
+<td>TestCases.CreateFormCases@3c407114</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkMandatoryValidation()'><b>checkMandatoryValidation</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+<tr>
+<td title='TestCases.LoginCases.InvalidEmailFormat()'><b>InvalidEmailFormat</b><br>Test class: TestCases.LoginCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.LoginCases@50a638b5</td></tr>
+<tr>
+<td title='TestCases.LoginCases.aLogin()'><b>aLogin</b><br>Test class: TestCases.LoginCases</td>
+<td></td>
+<td>2</td>
+<td>TestCases.LoginCases@50a638b5</td></tr>
+<tr>
+<td title='TestCases.LoginCases.InavalidEmailandPassword()'><b>InavalidEmailandPassword</b><br>Test class: TestCases.LoginCases</td>
+<td></td>
+<td>2</td>
+<td>TestCases.LoginCases@50a638b5</td></tr>
+<tr>
+<td title='TestCases.CreateFormCases.CreatFormLandingPage()'><b>CreatFormLandingPage</b><br>Test class: TestCases.CreateFormCases</td>
+<td></td>
+<td>10</td>
+<td>TestCases.CreateFormCases@3c407114</td></tr>
+<tr>
+<td title='TestCases.RegistrationCases.checkPasswordValidations()'><b>checkPasswordValidations</b><br>Test class: TestCases.RegistrationCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.RegistrationCases@31d7b7bf</td></tr>
+</table><p>
+</body>
+</html>

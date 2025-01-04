@@ -113,7 +113,7 @@ public class StepForm extends BaseBrowser {
 	
 	
 	
-    /*
+    
 	
 	
 	@Test
@@ -156,10 +156,10 @@ public class StepForm extends BaseBrowser {
 		  StepObject.enterLable(driver, "Number");
 		  StepObject.EnterValue(driver, "phonenumber", "P Number");
 		  StepObject.clickhere(driver, "updateButton");
-		  Thread.sleep(9000);
+		  Thread.sleep(5000);
 		  try 
 		  { 
-			   String texta =StepObject.getValueText(driver, "popup");
+			   String texta =StepObject.getValueText(driver, "toastCheck");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -167,7 +167,7 @@ public class StepForm extends BaseBrowser {
 			        System.out.println("Fail-o");
 			    }
 			} catch (Exception e) {
-			    System.out.println("Something went wrong !!");
+			    System.out.println("Something went wrong-Add Number Field 5");
 			}
 		}
 	
@@ -182,10 +182,10 @@ public class StepForm extends BaseBrowser {
 		  StepObject.enterLable(driver, "Website");
 		  StepObject.EnterValue(driver, "text", "URL");
 		  StepObject.clickhere(driver, "updateButton");
-		  Thread.sleep(9000);
+		  Thread.sleep(5000);
 		  try 
 		  { 
-			   String texta =StepObject.getValueText(driver, "popup");
+			   String texta =StepObject.getValueText(driver, "toastCheck");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -193,7 +193,7 @@ public class StepForm extends BaseBrowser {
 			        System.out.println("Fail-o");
 			    }
 			} catch (Exception e) {
-			    System.out.println("Something went wrong !!");
+			    System.out.println("Something went wrong 6!!");
 			}
 		}
 	
@@ -208,10 +208,10 @@ public class StepForm extends BaseBrowser {
 		  StepObject.enterLable(driver, "Time");
 		  StepObject.EnterValue(driver, "text", "Time");
 		  StepObject.clickhere(driver, "updateButton");
-		  Thread.sleep(9000);
+		  Thread.sleep(5000);
 		  try 
 		  { 
-			   String texta =StepObject.getValueText(driver, "popup");
+			   String texta =StepObject.getValueText(driver, "toastCheck");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -219,7 +219,7 @@ public class StepForm extends BaseBrowser {
 			        System.out.println("Fail-o");
 			    }
 			} catch (Exception e) {
-			    System.out.println("Something went wrong !!");
+			    System.out.println("Something went wrong 7!!");
 			}
 		}
 	
@@ -233,10 +233,10 @@ public class StepForm extends BaseBrowser {
 		  StepObject.enterLable(driver, "Address");
 		  StepObject.EnterValue(driver, "text", "address1");
 		  StepObject.clickhere(driver, "updateButton");
-		  Thread.sleep(9000);
+		  Thread.sleep(5000);
 		  try 
 		  { 
-			   String texta =StepObject.getValueText(driver, "popup");
+			   String texta =StepObject.getValueText(driver, "toastCheck");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -244,7 +244,7 @@ public class StepForm extends BaseBrowser {
 			        System.out.println("Fail-o");
 			    }
 			} catch (Exception e) {
-			    System.out.println("Something went wrong !!");
+			    System.out.println("Something went wrong 8!!");
 			}
 		}
 	
@@ -260,10 +260,10 @@ public class StepForm extends BaseBrowser {
 		  StepObject.enterLable(driver, "ShortAddress");
 		  StepObject.EnterValue(driver, "text", "address2");
 		  StepObject.clickhere(driver, "updateButton");
-		  Thread.sleep(9000);
+		  Thread.sleep(5000);
 		  try 
 		  { 
-			   String texta =StepObject.getValueText(driver, "popup");
+			   String texta =StepObject.getValueText(driver, "toastCheck");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -271,7 +271,7 @@ public class StepForm extends BaseBrowser {
 			        System.out.println("Fail-o");
 			    }
 			} catch (Exception e) {
-			    System.out.println("Something went wrong !!");
+			    System.out.println("Something went wrong9 !!");
 			}
 		}
 	
@@ -285,10 +285,10 @@ public class StepForm extends BaseBrowser {
 		  StepObject.enterLable(driver, "date");
 		  StepObject.EnterValue(driver, "text", "Date");
 		  StepObject.clickhere(driver, "updateButton");
-		  Thread.sleep(9000);
+		  Thread.sleep(5000);
 		  try 
 		  { 
-			   String texta =StepObject.getValueText(driver, "popup");
+			   String texta =StepObject.getValueText(driver, "toastCheck");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -296,12 +296,12 @@ public class StepForm extends BaseBrowser {
 			        System.out.println("Fail-o");
 			    }
 			} catch (Exception e) {
-			    System.out.println("Something went wrong !!");
+			    System.out.println("Something went wrong 10!!");
 			}
 		}
 		
 		
-	*/
+	
 	
 	    @Test
 	    (priority=11)
@@ -323,7 +323,7 @@ public class StepForm extends BaseBrowser {
 				        System.out.println("Fail-o");
 				    }
 				} catch (Exception e) {
-				    System.out.println("Something went wrong !!");
+				    System.out.println("Something went wrong11 !!");
 				}
 	     	  
 	     	  
@@ -347,19 +347,19 @@ public class StepForm extends BaseBrowser {
 				        System.out.println("Fail-o");
 				    }
 				} catch (Exception e) {
-				    System.out.println("Something went wrong !!");
+				    System.out.println("Something went wrong 12!!");
 				}
 	     	  
 	     	  
 	   }
 	   
 	   
-
+   
 	    
 	    
 	    @Test
 		(priority=13)
-		public void AddFields() throws InterruptedException, IOException
+		public void AddFieldsTwo() throws InterruptedException, IOException
 		{
 			//check the user can able to add the text field
 			  
@@ -379,9 +379,11 @@ public class StepForm extends BaseBrowser {
 				        System.out.println("Fail-o");
 				    }
 				} catch (Exception e) {
-				    System.out.println("Something went wrong !!");
+				    System.out.println("Something went wrong 13!!");
 				}
 			}
+	    
+	    
 	    
 	    
 	    @Test
@@ -399,9 +401,9 @@ public class StepForm extends BaseBrowser {
 			  Thread.sleep(5000);
 			   try 
 			  { 
-				   String texta =StepObject.getValueText(driver, "popup");
+				   String texta =StepObject.getValueText(driver, "toastCheck");
 				   System.out.println(texta);
-				    if (texta.equals(properties.getProperty("Successfields"))) {
+				    if (texta.equals(properties.getProperty("successaddfield"))) {
 				    	System.out.println("pass-o");
 				    } else {
 				        System.out.println("Fail-o");
@@ -425,9 +427,9 @@ public class StepForm extends BaseBrowser {
 			  Thread.sleep(5000);
 			   try 
 			  { 
-				   String texta =StepObject.getValueText(driver, "popup");
+				   String texta =StepObject.getValueText(driver, "toastCheck");
 				   System.out.println(texta);
-				    if (texta.equals(properties.getProperty("Successfields"))) {
+				    if (texta.equals(properties.getProperty("successaddfield"))) {
 				    	System.out.println("pass-o");
 				    } else {
 				        System.out.println("Fail-o");
@@ -451,9 +453,9 @@ public class StepForm extends BaseBrowser {
 			  Thread.sleep(5000);
 			   try 
 			  { 
-				   String texta =StepObject.getValueText(driver, "popup");
+				   String texta =StepObject.getValueText(driver, "toastCheck");
 				   System.out.println(texta);
-				    if (texta.equals(properties.getProperty("Successfields"))) {
+				    if (texta.equals(properties.getProperty("successaddfield"))) {
 				    	System.out.println("pass-o");
 				    } else {
 				        System.out.println("Fail-o");
@@ -464,7 +466,7 @@ public class StepForm extends BaseBrowser {
 			}
 	    
 	    @Test
-		(priority=16)
+		(priority=17)
 		public void MakeActive() throws InterruptedException, IOException
 		{
 			//check the user can able to add the lable name and radio values
@@ -476,7 +478,7 @@ public class StepForm extends BaseBrowser {
 			  { 
 				   String texta =StepObject.getValueText(driver, "popup");
 				   System.out.println(texta);
-				    if (texta.equals(properties.getProperty("Successfields"))) {
+				    if (texta.equals("Form Updated Successfully")) {
 				    	System.out.println("pass-o");
 				    } else {
 				        System.out.println("Fail-o");

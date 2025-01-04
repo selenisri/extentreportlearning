@@ -3,14 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.DeleteForm">
+      <class name="TestCases.StepForm">
         <methods>
+          <include name="AddCheckboxLable"/>
           <include name="tearDown"/>
           <include name="browserConfigChrome"/>
-          <include name="RemoveFields"/>
-          <include name="DeleteForm"/>
+          <include name="Tab2NameAddition"/>
+          <include name="Tab2NameValidation"/>
+          <include name="AddFieldsTwo"/>
+          <include name="AddDropDownLable"/>
+          <include name="dateTextField"/>
+          <include name="AddRadioLable"/>
         </methods>
-      </class> <!-- TestCases.DeleteForm -->
+      </class> <!-- TestCases.StepForm -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
