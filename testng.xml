@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite  name="CustomParallelSuite"  thread-count="3">
-  <test  name="Test" parallel="classes">
+<test  name="Test" parallel="classes">
     <classes>
       <class name="TestCases.RegistrationCases"/>
        <class name="TestCases.LoginCases"/>
@@ -16,6 +16,7 @@
       <class name="TestCases.DeleteForm"/>
       <class name="TestCases.CreateFormCases"/>
       <class name = "TestCases.StepForm"/>
+      <class name ="TestCases.DeleteAll"/>
       </classes>
    
   </test> <!-- Test -->

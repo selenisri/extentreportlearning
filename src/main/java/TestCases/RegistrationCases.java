@@ -234,7 +234,7 @@ public class RegistrationCases extends BaseBrowser {
 		RegistrationObject RegisterPage = new RegistrationObject();
 		RegisterPage.clickhere(driver ,"Register");
 		RegisterPage.EnterValue(driver, "name", "sssss");
-		RegisterPage.EnterValue(driver, "email", "sriram1807@zaigoinfotech.com");
+		RegisterPage.EnterValue(driver, "email", "sriram9090@zaigoinfotech.com");
 		RegisterPage.EnterValue(driver, "password", "Hello@123");
 		RegisterPage.clickhere(driver, "clickSubmit");
 		try {

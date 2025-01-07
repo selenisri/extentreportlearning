@@ -3,19 +3,22 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.StepForm">
+      <class name="TestCases.UpdateFields">
         <methods>
-          <include name="AddCheckboxLable"/>
           <include name="tearDown"/>
           <include name="browserConfigChrome"/>
-          <include name="Tab2NameAddition"/>
-          <include name="Tab2NameValidation"/>
-          <include name="AddFieldsTwo"/>
-          <include name="AddDropDownLable"/>
-          <include name="dateTextField"/>
-          <include name="AddRadioLable"/>
+          <include name="AddText"/>
+          <include name="DragandDropParaHeading"/>
+          <include name="HeadingName"/>
+          <include name="LandinDashboardPage"/>
+          <include name="AddTextField"/>
+          <include name="checkActiveNumbers"/>
+          <include name="AddEmailField"/>
+          <include name="ParaName"/>
+          <include name="AddNumberField"/>
+          <include name="publishButton"/>
         </methods>
-      </class> <!-- TestCases.StepForm -->
+      </class> <!-- TestCases.UpdateFields -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

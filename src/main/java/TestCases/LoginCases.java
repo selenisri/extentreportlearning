@@ -1,11 +1,16 @@
 package TestCases;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import org.openqa.selenium.TakesScreenshot;
 import PageObjects.AddUserPage;
 import PageObjects.Loginpageobject;
 
@@ -31,6 +36,7 @@ public class LoginCases extends BaseBrowser {
 	   catch (Exception e) {
 		
 		   System.out.println("Something went wrong !");
+		  
 	}
 	     
 }
@@ -49,13 +55,16 @@ public class LoginCases extends BaseBrowser {
 	   try
 	   {
 	   String getError = Loginpageobject.getEmailError(driver);
-	   if(getError.contains("Please Register and Login"))
+	   if(getError.contains("Hussainme"))
 	   {
 		   System.out.println("Pass");
 	   }
 	   else
-	   {
-		   System.out.println("Fail");
+	   {   
+		   File ss = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		   File destination = new File("screenshots/screenshot.png");
+           FileUtils.copyFile(ss, destination);
+           System.out.println("Failed");
 	   }
 	   }
 	   catch(Exception e)

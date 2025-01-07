@@ -47,6 +47,7 @@ public class UpdateFieldsObject {
 	
 	public static By fieldUpdated = By.xpath("//span[text()='Field Settings Updated Successfully']");
 	
+	
 	public static By cancel_button = By.xpath("//div[@id='settings_sec_show']//button[text()='Cancel']");
 	
 	
@@ -70,6 +71,8 @@ public class UpdateFieldsObject {
 	public static By send_btn= By.id("Share_form_icon");
 	public static By custom_link_menu = By.xpath("//span[text()='Custom Form Link']");
 	public static By get_link= By.xpath("//p[@id='customform_link']");
+	public static By Active_count = By.xpath("//div[@id='drag_area_section_contaniner']//following::span[text()='Active']");
+	public static By Draft_button = By.xpath("//section[starts-with(@id,'dragareasection_')]//span[text()='Draft']");
 	
 	public void editbutton(WebDriver driver , int val)
 	{
@@ -96,7 +99,41 @@ public class UpdateFieldsObject {
 		 }
 	
 	
-	
+	public boolean HoverDraft(WebDriver driver,int value)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 10); // 10 seconds timeout
+		System.out.println(value);
+        List<WebElement> isElementvisible = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Draft_button));
+        int len = 5-value;
+        for(int i=1;i<=len;i++)
+        {
+        	 if(this.isVisible(driver,nameDraft )) {
+        		    System.out.println("iam name");
+        			this.HoverElement(driver, "textfield");
+        	    	this.editbutton(driver, 1 );
+        	    	this.EnterText(driver, lablename, "Firstname");
+        	    	return true;
+        	        }else if(this.isVisible(driver,emailDraft ))
+        	        {
+        	        	System.out.println("iam Email");
+        	        	this.HoverElement(driver, "emailfield");
+            	    	this.editbutton(driver, 4 );
+            	    	this.EnterText(driver, lablename, "Email");
+            	    	return true;
+        	        }
+        	        else if(this.isVisible(driver,numDraft ))
+        	        {
+        	        	System.out.println("iam Number");
+        	        	this.HoverElement(driver, "numberfield");
+            	    	this.editbutton(driver, 7 );
+            	    	this.EnterText(driver, lablename, "Your Number");
+            	    	return true;
+        	        }
+        	 return true;
+        }
+		return true;
+       
+	}
 
 	
 	
@@ -147,6 +184,27 @@ public void draganddropBottom(WebDriver driver, By element ) {
        
 	}
 	
+	public int getActiveCount(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 10); // 10 seconds timeout
+
+        // Wait until the element is invisible
+        List<WebElement> ActiveCount = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Active_count));
+        int num= ActiveCount.size();
+        return num;
+       
+	}
+	
+	public int getDraftCount(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 10); // 10 seconds timeout
+
+        // Wait until the element is invisible
+        List<WebElement> ActiveCount = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Active_count));
+        int num= ActiveCount.size();
+        return num;
+       
+	}
 	
 	
 	
@@ -217,11 +275,11 @@ public void draganddropBottom(WebDriver driver, By element ) {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 500);"); 
+		js.executeScript("window.scrollBy(0, 500);");
 		WebElement field = wait.until(ExpectedConditions.elementToBeClickable(updatebtn));
-		//do {
-			this.clickme(driver,updatebtn );
-		//}while(isVisible(driver ,fieldUpdated));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(field).click().build().perform();
+		
 		
 	}
 	
@@ -272,7 +330,7 @@ public void draganddropBottom(WebDriver driver, By element ) {
             	this.draganddropBottom(driver,heading);
         	}else if(value.equals("number")) {
         	this.draganddrop(driver, numberfield);
-        	this.HoverElement(driver, "textfield");
+         	this.HoverElement(driver, "textfield");
         	if(isInVisible(driver,toastMessage)) {
         		this.editbutton(driver, 1 );
         		}
@@ -285,8 +343,11 @@ public void draganddropBottom(WebDriver driver, By element ) {
 	{
 		
 		if(value.equals("name")) {
+			if(this.isInVisible(driver, toastMessage))
+			{
 			this.HoverElement(driver, "textfield");
         	this.editbutton(driver, 1 );
+			}
     	}else if(value.equals("emailfield")) {
         	this.HoverElement(driver, "emailfield");
         	this.editbutton(driver, 4 );

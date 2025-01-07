@@ -5,16 +5,20 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 
 import PageObjects.Loginpageobject;
 import PageObjects.UpdateFieldsObject;
 
-public class UpdateFields extends BaseBrowser  {
+public class UpdateFields extends BaseBrowser implements ITestListener {
 	
 	
 	UpdateFieldsObject upObject = new UpdateFieldsObject();
 	Properties properties = new Properties();
+	public static boolean stopExecution = false;
 	  
 	
 	@Test
@@ -56,8 +60,6 @@ public class UpdateFields extends BaseBrowser  {
 		  upObject.DragnDrop(driver, "name");
 		  upObject.DragnDrop(driver, "email");
 		  upObject.DragnDrop(driver, "number");
-		  upObject.EnterValue(driver, "firstname", "Firstname");
-		 // upObject.clickhere(driver, "updateButton");
 		  try 
 		  { 
 			   String texta =upObject.getValueText(driver, "popup");
@@ -74,15 +76,16 @@ public class UpdateFields extends BaseBrowser  {
 	
 	
 	@Test
-	(priority=3)
+	(priority=5)
 	public void AddText() throws InterruptedException, IOException
 	{
 		//check the user can able to add the text field name
 		
 		  PageFactory.initElements(driver,UpdateFields.class);
-		 //upObject.enterLable(driver, "textfield");
-		 //upObject.EnterValue(driver, "phonenumber", "Name");
+		  upObject.enterLable(driver, "name");
+		  upObject.EnterValue(driver, "firstname", "Firstname");
 		  upObject.clickhere(driver, "updateButton");
+		  Thread.sleep(5000);
 		  try 
 		  { 
 			   String texta =upObject.getValueText(driver, "popup");
@@ -111,6 +114,7 @@ public class UpdateFields extends BaseBrowser  {
 		  upObject.enterLable(driver, "emailfield");
 		  upObject.EnterValue(driver, "email", "E Address");
 		  upObject.clickhere(driver, "updateButton");
+		  Thread.sleep(5000);
 		  try 
 		  { 
 			   String texta =upObject.getValueText(driver, "popup");
@@ -127,7 +131,7 @@ public class UpdateFields extends BaseBrowser  {
 	
 	
 	@Test
-	(priority=5)
+	(priority=3)
 	public void AddNumberField() throws InterruptedException, IOException
 	{
 		//check the user can able to add the Number field name
@@ -136,6 +140,7 @@ public class UpdateFields extends BaseBrowser  {
 		  upObject.enterLable(driver, "number");
 		  upObject.EnterValue(driver, "num", "Your Number");
 		  upObject.clickhere(driver, "updateButton");
+		  Thread.sleep(5000);
 		  
 		  try 
 		  { 
@@ -247,5 +252,29 @@ public class UpdateFields extends BaseBrowser  {
 			    System.out.println("Something went wrong !!");
 			}
 		}
+	
 
+	@Test
+	(priority=10)
+	public void checkActiveNumbers() throws InterruptedException, IOException
+	{
+		//check the user can able to active the fields.
+		
+		  PageFactory.initElements(driver,UpdateFields.class);
+		  int count=upObject.getActiveCount(driver);
+		  System.out.println(count);
+		  try 
+		  { 
+			     if (count==5) {
+			    	System.out.println("pass-o");
+			    } else {
+			    	System.out.println("This Feature will not work !");
+			    	
+			    }
+			} catch (Exception e) {
+			    System.out.println("Something went wrong !!!");
+			 }
+		}
+	
+	
 }
