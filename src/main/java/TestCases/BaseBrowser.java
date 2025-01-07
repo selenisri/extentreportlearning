@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import PageObjects.AddUserPage;
 import PageObjects.Loginpageobject;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseBrowser  {
 	protected WebDriver  driver ;
@@ -20,7 +21,7 @@ public class BaseBrowser  {
 	@BeforeClass
 	public  void browserConfigChrome() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srira\\Downloads\\chromedriver-win64wed\\chromedriver-win64\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://beta.zippyform.io/login/");
 		driver.manage().window().maximize();

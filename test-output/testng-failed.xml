@@ -3,10 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="TestCases.UpdateFields">
+=======
+      <class name="TestCases.LoginCases">
+>>>>>>> 70d02753ffdd7a7763bfbeb3aaa35f81e907bff2
         <methods>
           <include name="tearDown"/>
+          <include name="EmptyPasswordValidation"/>
           <include name="browserConfigChrome"/>
+<<<<<<< HEAD
           <include name="AddText"/>
           <include name="DragandDropParaHeading"/>
           <include name="HeadingName"/>
@@ -19,6 +25,14 @@
           <include name="publishButton"/>
         </methods>
       </class> <!-- TestCases.UpdateFields -->
+=======
+          <include name="aLogin"/>
+          <include name="InvalidEmailFormat"/>
+          <include name="EmptyEmailEmptyPassword"/>
+          <include name="InavalidEmailandPassword"/>
+        </methods>
+      </class> <!-- TestCases.LoginCases -->
+>>>>>>> 70d02753ffdd7a7763bfbeb3aaa35f81e907bff2
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
