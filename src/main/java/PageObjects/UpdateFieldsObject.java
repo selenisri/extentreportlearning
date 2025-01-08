@@ -43,6 +43,7 @@ public class UpdateFieldsObject {
 	public static By headerDraft = By.xpath("//section[starts-with(@id,'dragareasection_')]//h4[text()='Heading']/following::p[1]");
 	public static By paraDraft = By.xpath("//section[starts-with(@id,'dragareasection_')]//p[text()='This is a Paragraph']/following::p[1]");
 	public static By toastMessage = By.id("toast_type");
+	public static By FieldUpdate =By.id("toastmsg");
 	public static By Gen_Settings = By.xpath("//h6[text()='General Settings']");
 	
 	public static By fieldUpdated = By.xpath("//span[text()='Field Settings Updated Successfully']");
@@ -112,14 +113,35 @@ public class UpdateFieldsObject {
         			this.HoverElement(driver, "textfield");
         	    	this.editbutton(driver, 1 );
         	    	this.EnterText(driver, lablename, "Firstname");
-        	    	return true;
+        	    	this.clickhere(driver, "updateButton");
+        	    	try 
+        			  { 
+        				   String texta =this.getValueText(driver, "FieldUpdate");
+        				   System.out.println(texta);
+        				    if (texta.equals("Field Settings Updated Successfully")) {
+        				    	System.out.println("Name Field is Updated");
+        				    	if(this.isInVisible(driver, FieldUpdate))
+        				    	{
+        				    		this.clickme(driver, publishbtn);
+        				    		String textb =this.getValueText(driver, "FieldUpdate");
+        				    		System.out.println(texta);
+        				    	}
+        				    } else {
+        				        System.out.println("Fail-o");
+        				    }
+        				} catch (Exception e) {
+        				    System.out.println("Something went wrong !!");
+        				}
+        	    	
         	        }else if(this.isVisible(driver,emailDraft ))
         	        {
         	        	System.out.println("iam Email");
         	        	this.HoverElement(driver, "emailfield");
             	    	this.editbutton(driver, 4 );
             	    	this.EnterText(driver, lablename, "Email");
-            	    	return true;
+            	    	this.clickhere(driver, "updateButton");
+            	    	boolean updateMsg=this.isVisible(driver, FieldUpdate);
+            	    	return updateMsg;
         	        }
         	        else if(this.isVisible(driver,numDraft ))
         	        {
@@ -127,7 +149,9 @@ public class UpdateFieldsObject {
         	        	this.HoverElement(driver, "numberfield");
             	    	this.editbutton(driver, 7 );
             	    	this.EnterText(driver, lablename, "Your Number");
-            	    	return true;
+            	    	this.clickhere(driver, "updateButton");
+            	    	boolean updateMsg=this.isVisible(driver, FieldUpdate);
+            	    	return updateMsg;
         	        }
         	 return true;
         }
@@ -314,6 +338,8 @@ public void draganddropBottom(WebDriver driver, By element ) {
          {text=this.getText(driver, formname); }
          else if(value.equals("popup"))
          {text=this.getText(driver, toastMessage); }
+         else if(value.equals("FieldUpdate"))
+         {text=this.getText(driver, FieldUpdate); }
 		return text;
 	}
 	

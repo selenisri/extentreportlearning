@@ -84,7 +84,7 @@ public class UpdateFields extends BaseBrowser implements ITestListener {
 		  PageFactory.initElements(driver,UpdateFields.class);
 		  upObject.enterLable(driver, "name");
 		  upObject.EnterValue(driver, "firstname", "Firstname");
-		  upObject.clickhere(driver, "updateButton");
+		  //upObject.clickhere(driver, "updateButton");
 		  Thread.sleep(5000);
 		  try 
 		  { 
@@ -117,7 +117,7 @@ public class UpdateFields extends BaseBrowser implements ITestListener {
 		  Thread.sleep(5000);
 		  try 
 		  { 
-			   String texta =upObject.getValueText(driver, "popup");
+			   String texta =upObject.getValueText(driver, "FieldUpdate");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -144,7 +144,7 @@ public class UpdateFields extends BaseBrowser implements ITestListener {
 		  
 		  try 
 		  { 
-			   String texta =upObject.getValueText(driver, "popup");
+			   String texta =upObject.getValueText(driver, "FieldUpdate");
 			   System.out.println(texta);
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -168,7 +168,7 @@ public class UpdateFields extends BaseBrowser implements ITestListener {
 		  
 		  try 
 		  { 
-			   String texta =upObject.getValueText(driver, "popup");
+			   String texta =upObject.getValueText(driver, "FieldUpdate");
 			   System.out.println(texta+"add txt field");
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -192,7 +192,7 @@ public class UpdateFields extends BaseBrowser implements ITestListener {
 		  upObject.clickhere(driver, "updateButton");
 		  try 
 		  { 
-			   String texta =upObject.getValueText(driver, "popup");
+			   String texta =upObject.getValueText(driver, "FieldUpdate");
 			   System.out.println(texta+"add txt field");
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -216,7 +216,7 @@ public class UpdateFields extends BaseBrowser implements ITestListener {
 		  
 		  try 
 		  { 
-			   String texta =upObject.getValueText(driver, "popup");
+			   String texta =upObject.getValueText(driver, "FieldUpdate");
 			   System.out.println(texta+"add txt field");
 			    if (texta.equals(properties.getProperty("successaddfield"))) {
 			    	System.out.println("pass-o");
@@ -265,10 +265,11 @@ public class UpdateFields extends BaseBrowser implements ITestListener {
 		  System.out.println(count);
 		  try 
 		  { 
-			     if (count==5) {
+			     if (count==1) {
 			    	System.out.println("pass-o");
 			    } else {
 			    	System.out.println("This Feature will not work !");
+			    	upObject.HoverDraft(driver, count);
 			    	
 			    }
 			} catch (Exception e) {

@@ -42,9 +42,9 @@
 		</dependency>
 
 
-	</dependencies>
+	
 
-<<<<<<< HEAD
+
 <dependency>
     <groupId>commons-io</groupId>
     <artifactId>commons-io</artifactId>
@@ -71,6 +71,4 @@
   
   </dependencies>
   
-=======
->>>>>>> 70d02753ffdd7a7763bfbeb3aaa35f81e907bff2
 </project>
